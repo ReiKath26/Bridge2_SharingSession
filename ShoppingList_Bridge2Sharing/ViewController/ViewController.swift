@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController{
     
+    //Versi Ready
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tableView: UITableView!
