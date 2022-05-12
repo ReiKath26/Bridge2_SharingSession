@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController, UISearchBarDelegate{
     
 
     @IBOutlet var searchBar: UISearchBar!
@@ -30,5 +30,52 @@ class ViewController: UIViewController{
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddForm") as! AddFormController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        searchBar.showsCancelButton = true
+//
+//        if searchText == ""
+//        {
+//            fetchMarket()
+//        }
+//
+//        else
+//        {
+//            var placeHolderMarket = [Market]()
+//            markets = []
+//
+//            let fetchRequest = Market.fetchRequest()
+//            let sort = NSSortDescriptor(key: "distance", ascending: true)
+//
+//            fetchRequest.sortDescriptors = [sort]
+//
+//            do
+//            {
+//                placeHolderMarket = try context.fetch(fetchRequest)
+//
+//                for x in 0..<placeHolderMarket.count
+//                {
+//                    if placeHolderMarket[x].itemArray?.contains(where: { item in
+//                        item.name?.contains(searchText) == true
+//                    }) == true
+//                    {
+//                        market.append(placeHolderMarket[x])
+//                    }
+//                }
+//            }
+//
+//            catch
+//            {
+//
+//            }
+//        }
+//    }
+//
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//        searchBar.text = ""
+//        searchBar.endEditing(true)
+//        fetchMarket()
+//        searchBar.showsCancelButton = false
+//    }
 }
 
