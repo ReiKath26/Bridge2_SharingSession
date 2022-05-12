@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
+        </array>
+        <array key="SF-Pro-Rounded-Light.otf">
+            <string>SFProRounded-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="item_cell" rowHeight="80" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="ShoppingList_Bridge2Sharing" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mwO-sb-ld9">
+                        <rect key="frame" x="76" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="hRp-0Y-9uJ"/>
+                            <constraint firstAttribute="height" constant="60" id="tCA-Qo-uli"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SES-TO-DAz">
+                        <rect key="frame" x="149" y="18" width="205" height="24"/>
+                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="20"/>
+                        <color key="textColor" name="Default"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 0000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyi-Mk-8Lh">
+                        <rect key="frame" x="149" y="44" width="98" height="18"/>
+                        <fontDescription key="fontDescription" name="SFProRounded-Light" family="SF Pro Rounded" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wo9-xc-ogK">
+                        <rect key="frame" x="18" y="20.5" width="40" height="39"/>
+                        <color key="tintColor" name="Default"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="O3k-16-PcM"/>
+                            <constraint firstAttribute="width" constant="40" id="QPj-pL-3pA"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mwO-sb-ld9" firstAttribute="leading" secondItem="wo9-xc-ogK" secondAttribute="trailing" constant="18" id="24z-Ha-nC5"/>
+                    <constraint firstItem="wo9-xc-ogK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="3VA-ZK-ocL"/>
+                    <constraint firstItem="SES-TO-DAz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="9Zl-jW-3JA"/>
+                    <constraint firstAttribute="trailing" secondItem="SES-TO-DAz" secondAttribute="trailing" constant="20" id="9y4-mQ-zZI"/>
+                    <constraint firstAttribute="bottom" secondItem="mwO-sb-ld9" secondAttribute="bottom" constant="10" id="JW3-S8-uKv"/>
+                    <constraint firstItem="Nyi-Mk-8Lh" firstAttribute="top" secondItem="SES-TO-DAz" secondAttribute="bottom" constant="2" id="P3n-3N-ERi"/>
+                    <constraint firstItem="SES-TO-DAz" firstAttribute="leading" secondItem="mwO-sb-ld9" secondAttribute="trailing" constant="13" id="Qhy-34-6bx"/>
+                    <constraint firstAttribute="bottom" secondItem="Nyi-Mk-8Lh" secondAttribute="bottom" constant="18" id="YdP-vg-ICJ"/>
+                    <constraint firstAttribute="bottom" secondItem="wo9-xc-ogK" secondAttribute="bottom" constant="20" id="cna-tQ-AL0"/>
+                    <constraint firstAttribute="trailing" secondItem="Nyi-Mk-8Lh" secondAttribute="trailing" constant="127" id="dQO-13-2lT"/>
+                    <constraint firstItem="SES-TO-DAz" firstAttribute="leading" secondItem="mwO-sb-ld9" secondAttribute="trailing" constant="13" id="elh-m5-dbb"/>
+                    <constraint firstItem="Nyi-Mk-8Lh" firstAttribute="top" secondItem="SES-TO-DAz" secondAttribute="bottom" constant="2" id="qsi-Cv-kvA"/>
+                    <constraint firstItem="mwO-sb-ld9" firstAttribute="leading" secondItem="wo9-xc-ogK" secondAttribute="trailing" constant="18" id="sc9-LE-Olj"/>
+                    <constraint firstItem="mwO-sb-ld9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tl9-tk-ZfH"/>
+                    <constraint firstItem="wo9-xc-ogK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="ua9-k8-NYy"/>
+                    <constraint firstItem="Nyi-Mk-8Lh" firstAttribute="leading" secondItem="mwO-sb-ld9" secondAttribute="trailing" constant="13" id="zSj-jj-gEj"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="checkImage" destination="wo9-xc-ogK" id="W5R-dL-r90"/>
+                <outlet property="itemName" destination="SES-TO-DAz" id="aZe-3c-72M"/>
+                <outlet property="itemPrice" destination="Nyi-Mk-8Lh" id="OPR-aU-ahG"/>
+                <outlet property="thumbnailImage" destination="mwO-sb-ld9" id="KPY-gU-ZUi"/>
+            </connections>
+            <point key="canvasLocation" x="176.81159420289856" y="93.080357142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="circle" catalog="system" width="128" height="121"/>
+        <namedColor name="Default">
+            <color red="0.0" green="0.671580970287323" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1492411C282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1492411B282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf */; };
+		1492411E282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1492411D282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf */; };
+		14924121282CE182008C1568 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14924120282CE182008C1568 /* SF-Pro-Rounded-Regular.otf */; };
+		1492412C282CF0A3008C1568 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492412A282CF0A3008C1568 /* TableViewCell.swift */; };
+		1492412D282CF0A3008C1568 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1492412B282CF0A3008C1568 /* TableViewCell.xib */; };
+		14924130282CF65E008C1568 /* AddFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1492412F282CF65E008C1568 /* AddFormController.swift */; };
 		149F6077282BF34A0060060F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F6076282BF34A0060060F /* AppDelegate.swift */; };
 		149F6079282BF34A0060060F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F6078282BF34A0060060F /* SceneDelegate.swift */; };
 		149F607B282BF34A0060060F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149F607A282BF34A0060060F /* ViewController.swift */; };
@@ -17,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1492411B282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
+		1492411D282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
+		1492411F282CE175008C1568 /* SF-Pro-Rounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Light.otf"; sourceTree = "<group>"; };
+		14924120282CE182008C1568 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		1492412A282CF0A3008C1568 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		1492412B282CF0A3008C1568 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		1492412F282CF65E008C1568 /* AddFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFormController.swift; sourceTree = "<group>"; };
 		149F6073282BF34A0060060F /* ShoppingList_Bridge2Sharing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList_Bridge2Sharing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		149F6076282BF34A0060060F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		149F6078282BF34A0060060F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +52,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14924113282CC487008C1568 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		14924114282CDFF5008C1568 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1492411F282CE175008C1568 /* SF-Pro-Rounded-Light.otf */,
+				14924120282CE182008C1568 /* SF-Pro-Rounded-Regular.otf */,
+				1492411D282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf */,
+				1492411B282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1492412E282CF0AE008C1568 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				1492412A282CF0A3008C1568 /* TableViewCell.swift */,
+				1492412B282CF0A3008C1568 /* TableViewCell.xib */,
+			);
+			name = TableViewCell;
+			path = Fonts/TableViewCell;
+			sourceTree = "<group>";
+		};
+		14924131282CF666008C1568 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				149F607A282BF34A0060060F /* ViewController.swift */,
+				1492412F282CF65E008C1568 /* AddFormController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		149F606A282BF34A0060060F = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +108,12 @@
 		149F6075282BF34A0060060F /* ShoppingList_Bridge2Sharing */ = {
 			isa = PBXGroup;
 			children = (
+				14924113282CC487008C1568 /* Model */,
+				1492412E282CF0AE008C1568 /* TableViewCell */,
+				14924114282CDFF5008C1568 /* Fonts */,
 				149F6076282BF34A0060060F /* AppDelegate.swift */,
 				149F6078282BF34A0060060F /* SceneDelegate.swift */,
-				149F607A282BF34A0060060F /* ViewController.swift */,
+				14924131282CF666008C1568 /* ViewController */,
 				149F607C282BF34A0060060F /* Main.storyboard */,
 				149F6082282BF34C0060060F /* Assets.xcassets */,
 				149F6084282BF34C0060060F /* LaunchScreen.storyboard */,
@@ -130,7 +183,11 @@
 			files = (
 				149F6086282BF34C0060060F /* LaunchScreen.storyboard in Resources */,
 				149F6083282BF34C0060060F /* Assets.xcassets in Resources */,
+				1492412D282CF0A3008C1568 /* TableViewCell.xib in Resources */,
 				149F607E282BF34A0060060F /* Main.storyboard in Resources */,
+				1492411C282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf in Resources */,
+				1492411E282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf in Resources */,
+				14924121282CE182008C1568 /* SF-Pro-Rounded-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +199,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				149F607B282BF34A0060060F /* ViewController.swift in Sources */,
+				1492412C282CF0A3008C1568 /* TableViewCell.swift in Sources */,
 				149F6077282BF34A0060060F /* AppDelegate.swift in Sources */,
 				149F6081282BF34A0060060F /* ShoppingList_Bridge2Sharing.xcdatamodeld in Sources */,
+				14924130282CF65E008C1568 /* AddFormController.swift in Sources */,
 				149F6079282BF34A0060060F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
