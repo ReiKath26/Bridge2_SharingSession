@@ -29,10 +29,6 @@
                                 <rect key="frame" x="20" y="242" width="374" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="JhU-3s-rVW"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nAQ-EX-Tqr"/>
-                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What should I buy next?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn8-bZ-eDd">
                                 <rect key="frame" x="28" y="152" width="236" height="21"/>
@@ -206,7 +202,7 @@
     </scenes>
     <resources>
         <namedColor name="Default">
-            <color red="0.0" green="0.671580970287323" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.67199999094009399" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Highlight">
             <color red="0.0" green="0.58431372549019611" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
