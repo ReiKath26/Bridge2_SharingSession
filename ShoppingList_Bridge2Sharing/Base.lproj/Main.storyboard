@@ -29,6 +29,10 @@
                                 <rect key="frame" x="20" y="242" width="374" height="600"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="OOQ-xP-7Et"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="g33-oj-RJU"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What should I buy next?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hn8-bZ-eDd">
                                 <rect key="frame" x="28" y="152" width="236" height="21"/>

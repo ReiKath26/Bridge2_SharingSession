@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144ADDE2282E4F2A006EEF25 /* Market+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144ADDDE282E4F2A006EEF25 /* Market+CoreDataClass.swift */; };
+		144ADDE3282E4F2A006EEF25 /* Market+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144ADDDF282E4F2A006EEF25 /* Market+CoreDataProperties.swift */; };
+		144ADDE4282E4F2A006EEF25 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144ADDE0282E4F2A006EEF25 /* Item+CoreDataClass.swift */; };
+		144ADDE5282E4F2A006EEF25 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144ADDE1282E4F2A006EEF25 /* Item+CoreDataProperties.swift */; };
 		1492411C282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1492411B282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf */; };
 		1492411E282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1492411D282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf */; };
 		14924121282CE182008C1568 /* SF-Pro-Rounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14924120282CE182008C1568 /* SF-Pro-Rounded-Regular.otf */; };
@@ -23,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		144ADDDE282E4F2A006EEF25 /* Market+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Market+CoreDataClass.swift"; sourceTree = "<group>"; };
+		144ADDDF282E4F2A006EEF25 /* Market+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Market+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		144ADDE0282E4F2A006EEF25 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
+		144ADDE1282E4F2A006EEF25 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1492411B282CE122008C1568 /* SF-Pro-Rounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Semibold.otf"; sourceTree = "<group>"; };
 		1492411D282CE15E008C1568 /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		1492411F282CE175008C1568 /* SF-Pro-Rounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Light.otf"; sourceTree = "<group>"; };
@@ -55,6 +63,10 @@
 		14924113282CC487008C1568 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				144ADDDE282E4F2A006EEF25 /* Market+CoreDataClass.swift */,
+				144ADDDF282E4F2A006EEF25 /* Market+CoreDataProperties.swift */,
+				144ADDE0282E4F2A006EEF25 /* Item+CoreDataClass.swift */,
+				144ADDE1282E4F2A006EEF25 /* Item+CoreDataProperties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,11 +211,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				149F607B282BF34A0060060F /* ViewController.swift in Sources */,
+				144ADDE3282E4F2A006EEF25 /* Market+CoreDataProperties.swift in Sources */,
 				1492412C282CF0A3008C1568 /* TableViewCell.swift in Sources */,
+				144ADDE4282E4F2A006EEF25 /* Item+CoreDataClass.swift in Sources */,
+				144ADDE5282E4F2A006EEF25 /* Item+CoreDataProperties.swift in Sources */,
 				149F6077282BF34A0060060F /* AppDelegate.swift in Sources */,
 				149F6081282BF34A0060060F /* ShoppingList_Bridge2Sharing.xcdatamodeld in Sources */,
 				14924130282CF65E008C1568 /* AddFormController.swift in Sources */,
 				149F6079282BF34A0060060F /* SceneDelegate.swift in Sources */,
+				144ADDE2282E4F2A006EEF25 /* Market+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

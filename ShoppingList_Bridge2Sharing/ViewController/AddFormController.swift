@@ -24,18 +24,30 @@ class AddFormController: UIViewController, PHPickerViewControllerDelegate, UIPic
     var price: Double = 0
     var marketSelected: Int = 0
     
+    var editItem : Item?
     var pickerView = UIPickerView()
+    var markets = [Market]()
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        marketData()
+        fetchMarket()
         setPickerView()
+        
+        if editItem != nil
+        {
+            pickedImage = UIImage(data: (editItem?.picture!)!)
+            imageChange()
+            nameTextField.text = editItem?.name
+            price = editItem?.price ?? 0
+        }
         
         priceTextField.text = String(price)
         // Do any additional setup after loading the view.
     }
+    
     
     @IBAction func tapPickButton()
     {
@@ -95,38 +107,52 @@ class AddFormController: UIViewController, PHPickerViewControllerDelegate, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 5
+        return markets.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "Toko"
+        return markets[row].name
     }
     
-//    func marketData()
-//    {
-//        let market1 = Market(context: context)
-//        market1.name = "Alfamart"
-//        market1.distance = 0.2
-//
-//        let market2 = Market(context: context)
-//        market2.name = "Indomaret"
-//        market2.distance = 0.4
-//
-//        let market3 = Market(context: context)
-//        market3.name = "Lawson"
-//        market3.distance = 0.3
-//
-//        let market4 = Market(context: context)
-//        market4.name = "7 Eleven"
-//        market4.distance = 1.2
-//
-//        let market5 = Market(context: context)
-//        market5.name = "Aeon"
-//        market5.distance = 3.4
-//    }
+    func marketData()
+    {
+        let market1 = Market(context: context)
+        market1.name = "Alfamart"
+        market1.distance = 0.2
+
+        let market2 = Market(context: context)
+        market2.name = "Indomaret"
+        market2.distance = 0.4
+
+        let market3 = Market(context: context)
+        market3.name = "Lawson"
+        market3.distance = 0.3
+
+        let market4 = Market(context: context)
+        market4.name = "7 Eleven"
+        market4.distance = 1.2
+
+        let market5 = Market(context: context)
+        market5.name = "Aeon"
+        market5.distance = 3.4
+    }
+    
+    func fetchMarket()
+    {
+        do
+        {
+            markets = try context.fetch(Market.fetchRequest())
+        }
+        
+        catch
+        {
+            
+        }
+        
+    }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        marketTextField.text = "Toko"
+        marketTextField.text = markets[row].name
         marketSelected = row
         checkForm()
     }
@@ -151,14 +177,69 @@ class AddFormController: UIViewController, PHPickerViewControllerDelegate, UIPic
         marketTextField.inputView = pickerView
         
         // default set value
-        pickerView.selectRow(1, inComponent: 0, animated: true)
-        pickerView(pickerView, didSelectRow: 1, inComponent: 0)
+        
+        
+        for x in 0..<markets.count
+        {
+            if markets[x].name == editItem?.market?.name
+            {
+                marketSelected = x
+            }
+        }
+        
+        if editItem != nil
+        {
+            pickerView.selectRow(marketSelected, inComponent: 0, animated: true)
+            pickerView(pickerView, didSelectRow: marketSelected, inComponent: 0)
+        }
+        
+        else
+        {
+            pickerView.selectRow(1, inComponent: 0, animated: true)
+            pickerView(pickerView, didSelectRow: 1, inComponent: 0)
+        }
+        
+       
         
     }
     
     @IBAction func tapSaveButton()
     {
         
+        if editItem != nil
+        {
+            editItem?.name = name
+            editItem?.price = price
+            editItem?.picture = pickedImage?.jpegData(compressionQuality: 0.15)
+            editItem?.market = markets[marketSelected]
+        
+        }
+        
+        else
+        {
+            let newItem = Item(context: context)
+            newItem.name = name
+            newItem.price = price
+            newItem.picture = pickedImage?.jpegData(compressionQuality: 0.15)
+            newItem.isBought = false
+            newItem.market = markets[marketSelected]
+        }
+      
+        
+        do
+        {
+            try context.save()
+            let alert = UIAlertController(title: "Success", message: "Succesfully saved item!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { _ in
+                self.navigationController?.popViewController(animated: true)
+            }))
+            present(alert, animated: true)
+        }
+        
+        catch
+        {
+            
+        }
     }
     
     
